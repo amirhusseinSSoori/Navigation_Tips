@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NavigationTips</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="next_page">Next page</string>
+    <string name="account">account</string>
+
 </resources>
