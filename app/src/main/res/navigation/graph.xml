@@ -3,21 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/searchFragment">
 
     <keep_state_fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_home"
-        android:name="com.example.navigationtips.fr.home.HomeFragment"
+        android:name="com.example.navigationtips.fr.main.home.HomeFragment"
         android:label="HomeFragment" />
+
     <keep_state_fragment
         android:id="@+id/searchFragment"
         tools:layout="@layout/fragment_search"
-        android:name="com.example.navigationtips.fr.search.SearchFragment"
+        android:name="com.example.navigationtips.fr.main.search.SearchFragment"
         android:label="SearchFragment" />
+
     <keep_state_fragment
-        android:id="@+id/accountFragment"
-        tools:layout="@layout/fragment_account"
-        android:name="com.example.navigationtips.fr.account.AccountFragment"
-        android:label="AccountFragment" />
+        android:id="@+id/account_container_Fragment"
+        tools:layout="@layout/fragment_account_container"
+        android:name="com.example.navigationtips.fr.main.account.AccountContainer"
+        android:label="AccountFragment" >
+
+    </keep_state_fragment>
+
+
+
+
+
 </navigation>

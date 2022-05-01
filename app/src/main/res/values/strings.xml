@@ -4,5 +4,8 @@
     <string name="search">search</string>
     <string name="next_page">Next page</string>
     <string name="account">account</string>
+    <string name="send_data">send Data</string>
+    <string name="user_name">User Name</string>
+    <string name="navigation">navigation</string>
 
 </resources>
