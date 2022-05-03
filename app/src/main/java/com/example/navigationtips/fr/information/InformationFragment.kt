@@ -13,6 +13,7 @@ class InformationFragment : BaseFragment<FragmentInformationBinding>(FragmentInf
     private val viewModel:InformationViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        showBottomNavigation(false)
         binding.txtInformation.text=viewModel.str
 
     }
