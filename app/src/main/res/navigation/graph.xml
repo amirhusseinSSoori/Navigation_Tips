@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_home"
         android:name="com.example.navigationtips.fr.main.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </keep_state_fragment>
 
     <keep_state_fragment
         android:id="@+id/searchFragment"
@@ -22,11 +26,13 @@
         tools:layout="@layout/fragment_account_container"
         android:name="com.example.navigationtips.fr.main.account.AccountContainer"
         android:label="AccountFragment" >
-
     </keep_state_fragment>
 
 
-
+    <keep_state_fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.navigationtips.fr.user.UserFragment"
+        android:label="UserFragment" />
 
 
 </navigation>
