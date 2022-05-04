@@ -8,5 +8,9 @@
     <string name="user_name">User Name</string>
     <string name="navigation">navigation</string>
     <string name="user_pages">User Pages</string>
+    <string name="hint_password">Enter  PassWord</string>
+    <string name="hint_user_name">Enter  User Name</string>
+    <string name="login">login</string>
+    <string name="sing_up">Sing up</string>
 
 </resources>

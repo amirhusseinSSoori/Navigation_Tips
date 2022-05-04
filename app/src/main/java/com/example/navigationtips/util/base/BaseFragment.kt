@@ -34,15 +34,15 @@ abstract class BaseFragment<VB : ViewBinding>(
     }
 
      fun showBottomNavigation(visibility:Boolean) {
-        if (activity is MainActivity) {
-            val mainActivity = activity as MainActivity
-            if(visibility){
-                mainActivity.binding.bottomNav.setVisibilityWithAnimation(1.0f)
-            }else{
-                mainActivity.binding.bottomNav.setVisibilityWithAnimation(0.0f)
-            }
-
-        }
+//        if (activity is MainActivity) {
+//            val mainActivity = activity as MainActivity
+//            if(visibility){
+//                mainActivity.binding.bottomNav.setVisibilityWithAnimation(1.0f)
+//            }else{
+//                mainActivity.binding.bottomNav.setVisibilityWithAnimation(0.0f)
+//            }
+//
+//        }
     }
 }
 
