@@ -13,6 +13,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
+
+
     private val navController: NavController
         get() {
             return Navigation.findNavController(requireActivity(), R.id.nav_login_fragment)
@@ -21,8 +23,27 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.informationFragment -> hideBottomNav()
+                R.id.userFragment -> hideBottomNav()
+                else -> showBottomNav()
+            }
+        }
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
     }
 
 
+
+
+
+    private fun showBottomNav() {
+        binding.bottomNav.visibility = View.VISIBLE
+    }
+
+    private fun hideBottomNav() {
+        binding.bottomNav.visibility = View.GONE
+
+    }
 }

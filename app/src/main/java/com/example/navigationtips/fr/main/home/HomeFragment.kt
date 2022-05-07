@@ -13,7 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.btnNavSearch.setOnClickListener {
               findNavController().navigate(R.id.action_homeFragment_to_userFragment)
         }

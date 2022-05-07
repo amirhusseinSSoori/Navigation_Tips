@@ -15,7 +15,6 @@ class UserFragment : BaseFragment<FragmentUserBinding>(FragmentUserBinding::infl
     )
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showBottomNavigation(false)
 
         val viewPager = binding.viewPager
         val tabLayout = binding.tabLayout

@@ -12,7 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginFragment :BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showBottomNavigation(false)
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
         }

@@ -9,12 +9,10 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class InformationFragment : BaseFragment<FragmentInformationBinding>(FragmentInformationBinding::inflate) {
-
     private val viewModel:InformationViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showBottomNavigation(false)
-        binding.txtInformation.text=viewModel.str
+        binding.txtInformation.text = viewModel.str
 
     }
 }
