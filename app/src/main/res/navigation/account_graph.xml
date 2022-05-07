@@ -14,7 +14,7 @@
             android:id="@+id/action_accountFragment_to_informationFragment"
             app:destination="@id/informationFragment" >
             <argument
-                android:name="username"
+                android:name="information"
                 app:argType="string"
                 android:defaultValue="empty" />
         </action>

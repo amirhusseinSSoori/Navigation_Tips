@@ -5,6 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.navigationtips.databinding.FragmentAccountBinding
 import com.example.navigationtips.util.base.BaseFragment
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -13,11 +14,20 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>(FragmentAccountBind
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.navigationToAccount.setOnClickListener {
-            val action = AccountFragmentDirections.actionAccountFragmentToInformationFragment(
-                binding.editUserName.getText().toString()
-            )
-            findNavController().navigate(action)
+        binding.apply {
+            navigationToAccount.setOnClickListener {
+                val unameValue = editName.text.toString()
+                val familyValue = editFamily.text.toString()
+                val emailValue = editEmail.text.toString()
+
+                val data = Gson().toJson(InformationModels(unameValue, familyValue, emailValue))
+
+                val action = AccountFragmentDirections.actionAccountFragmentToInformationFragment(
+                    data
+                )
+                findNavController().navigate(action)
+
+            }
         }
     }
 }
