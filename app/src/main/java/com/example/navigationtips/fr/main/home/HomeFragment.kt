@@ -16,5 +16,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
         binding.btnNavSearch.setOnClickListener {
               findNavController().navigate(R.id.action_homeFragment_to_userFragment)
         }
+
+        binding.btnLogOut.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_confirmDialogFragment)
+        }
     }
 }

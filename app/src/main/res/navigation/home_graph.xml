@@ -12,10 +12,21 @@
         <action
             android:id="@+id/action_homeFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_confirmDialogFragment"
+            app:destination="@id/confirmDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/userFragment"
         android:name="com.example.navigationtips.fr.user.UserFragment"
         android:label="UserFragment" />
+
+    <dialog
+        android:id="@+id/confirmDialogFragment"
+        tools:layout="@layout/fragment_confirm_dialog"
+        android:name="com.example.navigationtips.fr.dilaog.ConfirmDialogFragment"
+        android:label="ConfirmDialogFragment" />
+
+
 
 </navigation>

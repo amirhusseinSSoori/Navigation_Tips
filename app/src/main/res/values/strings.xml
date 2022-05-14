@@ -14,5 +14,10 @@
     <string name="sing_up">Sing up</string>
     <string name="email">Email</string>
     <string name="family">family</string>
+    <string name="confirm">Confirm</string>
+    <string name="do_you_want_to_send_this_money">Do you want to send this money?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="logout">LogOut</string>
 
 </resources>
