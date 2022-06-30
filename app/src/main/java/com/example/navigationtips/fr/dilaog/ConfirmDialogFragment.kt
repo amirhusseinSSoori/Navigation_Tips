@@ -1,39 +1,40 @@
 package com.example.navigationtips.fr.dilaog
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import androidx.fragment.app.DialogFragment
 import com.example.navigationtips.R
 import com.example.navigationtips.databinding.FragmentConfirmDialogBinding
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.example.navigationtips.util.Message
+import com.example.navigationtips.util.NotificationCenter
+import com.example.navigationtips.util.base.BaseDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ConfirmDialogFragment : BottomSheetDialogFragment() {
+class ConfirmDialogFragment :
+    BaseDialogFragment<FragmentConfirmDialogBinding>(FragmentConfirmDialogBinding::inflate) {
 
-    private var _binding: FragmentConfirmDialogBinding? = null
-    val binding get() = _binding!!
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_confirm_dialog, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        _binding = FragmentConfirmDialogBinding.bind(view)
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnYes.setOnClickListener {
+            NotificationCenter.notifySubscribers(Message(1, "you cant"){
+                //no callBack
+            })
+            dismiss()
+        }
         binding.btnNo.setOnClickListener {
             dismiss()
         }
     }
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
+
+
+
